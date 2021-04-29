@@ -1,0 +1,108 @@
+@import 'all.min.css';
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   border: 0;
+   text-decoration: none;
+   list-style: none;
+}
+
+.header_intro{
+   width: 100%;
+   height: 100vh;
+   background: linear-gradient(to top, #192b2b, #0e1316 ,  #0a0f12);
+   /* background: url(../images/фон2.jpg) no-repeat;
+   background-size: cover; */
+} 
+
+
+
+.image-slider{
+   padding: 30px 0 70px 0;
+   height: 100%;  
+}
+
+
+.image-slider__wrapper .swiper-slide-next .image-slider__image{
+   transform: scale(2);
+   transition: 0.7s;
+}
+
+
+.image-slider__slide{
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   min-width: 0;
+}
+
+
+.image-slider__image{
+   max-width: 100%;
+   border-radius: 50%;
+   /* overflow: hidden; */
+   width: 200px;
+   height: 200px;
+   position: relative;
+   /* box-shadow: 2px 4px 10px 4px rgb(0, 0, 0, 0.5); */
+}
+
+.image-slider__image img{
+   border-radius: 50%;
+}
+
+
+.image-slider__wrapper .swiper-slide-next  .image-slider__image::before{
+   content: '';
+   position: absolute;
+   border-radius: 50%;
+   height: 250px;
+   width: 250px;
+   filter: blur(10px);
+   left: -25px;
+   bottom: -30px;
+   z-index: -1;
+   background-color: #FF3CAC;
+   background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
+.image-slider__wrapper .swiper-slide-next  .image-slider__image::before{
+   animation: fade 1.5s;
+}
+
+
+
+@keyframes fade{
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+
+
+.image-slider__image img{
+   width: auto;
+   height: 100%;
+}
+
+/* *Стрелки */
+
+.image-slider .swiper-button-prev::after,
+.image-slider .swiper-button-next::after{
+   color: #fff;
+}
+
+ .image-slider .swiper-button-prev{
+   left: 30% !important;
+}
+.image-slider .swiper-button-next{
+   right: 30% !important;
+}
+ 
+
+
+
+
